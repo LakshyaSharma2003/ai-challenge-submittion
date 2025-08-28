@@ -1,5 +1,4 @@
-# Technical Documentation
-
+#Technical Documentation
 -----
 
 # AI Vision Chatbot - Technical Documentation
@@ -43,40 +42,6 @@ The project relies exclusively on modern browser APIs and open-source JavaScript
 ## 🏗️ Technical Architecture
 
 The application operates on a client-side data flow, processing as much as possible within the browser before querying the external Gemini API.
-
-flowchart TD
-    subgraph "User's Browser (Client-Side)"
-        A[Camera / Screen Share] -->|Video Stream| B(HTML <video> Element);
-        B -->|Frames| C{TensorFlow.js & MobileNet};
-        C -->|'Current Prediction'| D[UI State];
-        
-        E[Microphone] -->|Audio| F[Web Speech API: Speech-to-Text];
-        G[Keyboard Input] -->|Text| H{Interaction Handler};
-        F -->|Transcript| H;
-        
-        I[Screenshot Button] -->|Base64 Image| H;
-        
-        D -->|Context| H;
-        
-        H -->|Formatted Prompt (Text + Image?)| J[API Request Module];
-    end
-
-    subgraph "Google Cloud"
-        K(Google Gemini API);
-    end
-
-    J -->|HTTPS Request| K;
-    K -->|AI Response| J;
-    J -->|Parsed Text| L[UI Update & Speech Synthesis];
-    
-    L --> M[Chat Display];
-    L --> N[Web Speech API: Text-to-Speech];
-    
-    style A fill:#bde0fe,stroke:#333
-    style E fill:#bde0fe,stroke:#333
-    style G fill:#bde0fe,stroke:#333
-    style I fill:#bde0fe,stroke:#333
-```
 
 **Data Flow Explained:**
 
@@ -170,3 +135,5 @@ The interface is designed to be intuitive and straightforward.
   * **Real-Time Context**: The AI is constantly aware of the primary object in the camera's view, allowing it to answer questions like "What can I do with this?".
   * **Screen Share Analysis**: The AI can "watch" your screen and answer questions, making it a useful tool for pair programming or troubleshooting.
   * **Voice-Enabled**: Full hands-free experience with voice commands and audible responses.
+
+  * ![WhatsApp Image 2025-08-28 at 23 08 20_5a39ff64](https://github.com/user-attachments/assets/76654102-5e75-4efb-a51a-7ad5a0b4b652)
