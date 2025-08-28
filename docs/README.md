@@ -44,7 +44,6 @@ The project relies exclusively on modern browser APIs and open-source JavaScript
 
 The application operates on a client-side data flow, processing as much as possible within the browser before querying the external Gemini API.
 
-```mermaid
 flowchart TD
     subgraph "User's Browser (Client-Side)"
         A[Camera / Screen Share] -->|Video Stream| B(HTML <video> Element);
