@@ -137,3 +137,5 @@ The interface is designed to be intuitive and straightforward.
   * **Voice-Enabled**: Full hands-free experience with voice commands and audible responses.
 
   * ![WhatsApp Image 2025-08-28 at 23 08 20_5a39ff64](https://github.com/user-attachments/assets/76654102-5e75-4efb-a51a-7ad5a0b4b652)
+
+  * youtube video link https://youtu.be/2qO3sQa0-8w
